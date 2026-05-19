@@ -10,7 +10,7 @@
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 :root{--navy:#1a2744;--gold:#c9a84c;--gold-light:#e8c96a;--cream:#faf8f3;--text:#2d3748}
-body{font-family:'Inter',sans-serif;color:var(--text);background:#fff}
+body{font-family:'Inter',sans-serif;color:var(--text);background:#fff;padding-top:40px}
 
 /* HERO */
 .hero{position:relative;height:100vh;min-height:580px;background:var(--navy);display:flex;align-items:center;justify-content:center;overflow:hidden}
@@ -85,9 +85,11 @@ nav.scrolled{background:var(--navy);box-shadow:0 2px 20px rgba(0,0,0,0.3)}
 .contact-value a{color:var(--gold);text-decoration:none}
 
 /* BANNER */
-.banner{background:linear-gradient(135deg,var(--navy),#2c3e6e);padding:80px 24px;text-align:center;color:#fff}
-.banner h2{font-family:'Cormorant Garamond',serif;font-size:clamp(1.6rem,3vw,2.6rem);font-weight:600;margin-bottom:16px}
-.banner p{color:rgba(255,255,255,0.7);margin-bottom:32px;font-size:16px}
+#buy-banner{position:fixed;top:0;left:0;width:100%;background:#000;color:#fff;z-index:9999;padding:10px 24px;display:flex;align-items:center;justify-content:space-between;gap:12px}
+#buy-banner p{font-size:14px;margin:0}
+#buy-banner a.stripe{background:#ff4d00;color:#fff;text-decoration:none;padding:8px 18px;border-radius:4px;font-size:13px;font-weight:500;white-space:nowrap;flex-shrink:0}
+@media(max-width:600px){#buy-banner .dt{display:none}}
+@media(min-width:601px){#buy-banner .mob{display:none}}
 
 /* FOOTER */
 footer{background:#111827;color:rgba(255,255,255,0.5);padding:32px 24px;text-align:center;font-size:13px}
@@ -123,7 +125,7 @@ footer a{color:rgba(255,255,255,0.4);text-decoration:none}
 </nav>
 
 <section class="hero">
-  <div class="hero-bg"><img src="https://maps.googleapis.com/maps/api/place/photo?maxwidth=1200&photoreference=Ab43m-t3xKVyt4spNr9nswNShzVSQbU8qsoNzjtQTbHe0AmGqjc9EioLD_x3134ElPuX_CKWmGzepxS4K7KPGU3D1c_iVkl307OeOYyk7tVk_rf242wIASbbmV74xgxsddcAEsU2Rruyr_njxKMFNW1OZ7ZqC7_Tj1huwyi7OxXGs94hBDoJE0mOAS_C8EewIQiIzIZcJcxFyy-6oxrqaDiAjFwXf7qu5E6isdGmr87Z7CNn1FEEqnr_cBgKpitHVGcR3yU19pbeu1wsvUaenxq0Y2jWNFuifw4dH-Ly8ViGVNjFJw&key=AIzaSyCYXbAb5oATfgJRzDY7v7_wNhQ6F7PltAM" alt="Avvocato Valeria Scilipoti" style="width:100%;height:100%;object-fit:cover;opacity:0.35"></div>
+  <div class="hero-bg"><img src="https://maps.googleapis.com/maps/api/place/photo?maxwidth=1200&photoreference=Ab43m-usmdFcs0SdVf37oeQijeNyiRfA1irOb-QHvfr8z6qAss7H9cJ75Vkfe8YPQMchmsNjC5Tqhveu2nhBtb7xLx5Z9UZ2Ys4F7sKplpgpYxvo8r77HobUemxXEj-EJFBoz_3Plf6SbQFG-vvePax_AA8OtPPPY7SnObjeYz_b_x5xymbrkGKL1yC8hImlZEwI_g9DTx0CxNNPV-lC2fwRMvYFPqC3DdSTok9oKo0uwkzDBfiEJaaERy6u8PD2ZrJlFFmN2p_zPHgZoTxvwTnb03qAfPkD7UMcHbCXIo0vHbw8kw&key=AIzaSyCYXbAb5oATfgJRzDY7v7_wNhQ6F7PltAM" alt="Avvocato Valeria Scilipoti" style="width:100%;height:100%;object-fit:cover;opacity:0.35"></div>
   <div class="hero-overlay"></div>
   <div class="hero-content">
     <div class="hero-badge">Avvocato civilista · Bologna</div>
@@ -150,7 +152,7 @@ footer a{color:rgba(255,255,255,0.4);text-decoration:none}
         </div>
       </div>
       <div class="about-img">
-        <img src="https://maps.googleapis.com/maps/api/place/photo?maxwidth=700&photoreference=Ab43m-uF1yxCWchkaeIB-866SagDnFvv197aDtG32G_H2imX2FiXFW91Q6fsckDLVLfRQGR889kKv3sQhqaK5fA_Or4_V2RgAwRcXM3AXPoU_fXgz-6fuxHFPHGz8GUhEE_1ccN7W0uKU1ZQVR5Yk8CA19OSD7LICAzVQENjeB7dLRiYdJh4HqK--uRoYFBfGHtLovFWYNspGWG3w0tM5uvImWgv4FKu8jP5ved6qmdeScbv64oitk0DQuAnUdK_YeYUbLTd7bYgP4i0nG43KNYGq4MTv8jxWeIH7BFGD6Iu-X_arg&key=AIzaSyCYXbAb5oATfgJRzDY7v7_wNhQ6F7PltAM" alt="Avvocato Valeria Scilipoti">
+        <img src="https://maps.googleapis.com/maps/api/place/photo?maxwidth=700&photoreference=Ab43m-t29uKj2QG0VRlFGiPa5y59j0W-f11UOP5QOSObk9W5foJ_DSTONaPJkaXzqJ7-1OG8NlJcekrrdc1K_kmfXFO7JFH7lwUc4Xlnx84OaaIo56W_bjxQ-2YAQBCO664ZtkvVR_iUdGdUzl9xgbMn7EhHrHmVVDdSY4InCndypH2TE3_pIGBkkBheH-D8obKxc9sNwHjeAiIXTCV5t9LgrneHGqKCyg0mEH1JuoFY5mxDS-nnYMXfbaH9vXe1hOo7ZnaCCS7MAAewUQmdgVYdFItSO4DyVCOH-bI7QJoM3UKDcA&key=AIzaSyCYXbAb5oATfgJRzDY7v7_wNhQ6F7PltAM" alt="Avvocato Valeria Scilipoti">
       </div>
     </div>
   </div>
@@ -160,7 +162,7 @@ footer a{color:rgba(255,255,255,0.4);text-decoration:none}
   <div class="container">
     <h2 class="section-title">Servizi offerti</h2>
     <div class="services-grid"><div class="service-item"><div class="service-icon">⚖</div><span>Consulenza legale</span></div><div class="service-item"><div class="service-icon">⚖</div><span>Diritto civile</span></div><div class="service-item"><div class="service-icon">⚖</div><span>Diritto del lavoro</span></div><div class="service-item"><div class="service-icon">⚖</div><span>Diritto penale</span></div><div class="service-item"><div class="service-icon">⚖</div><span>Recupero crediti</span></div><div class="service-item"><div class="service-icon">⚖</div><span>Contrattualistica</span></div></div>
-    <div class="photo-grid"><div class="photo-item" style="background-image:url('https://maps.googleapis.com/maps/api/place/photo?maxwidth=600&photoreference=Ab43m-uF1yxCWchkaeIB-866SagDnFvv197aDtG32G_H2imX2FiXFW91Q6fsckDLVLfRQGR889kKv3sQhqaK5fA_Or4_V2RgAwRcXM3AXPoU_fXgz-6fuxHFPHGz8GUhEE_1ccN7W0uKU1ZQVR5Yk8CA19OSD7LICAzVQENjeB7dLRiYdJh4HqK--uRoYFBfGHtLovFWYNspGWG3w0tM5uvImWgv4FKu8jP5ved6qmdeScbv64oitk0DQuAnUdK_YeYUbLTd7bYgP4i0nG43KNYGq4MTv8jxWeIH7BFGD6Iu-X_arg&key=AIzaSyCYXbAb5oATfgJRzDY7v7_wNhQ6F7PltAM')"></div><div class="photo-item" style="background-image:url('https://maps.googleapis.com/maps/api/place/photo?maxwidth=600&photoreference=Ab43m-u2llFoPtrqnZavwbhwR-fms9MUy4iKPuCMjBnhJXI1tzt_aoIpY1NUvMR6syimtjCu09jR5QFtkwPef8djJvkGh7uoAGV-F4fTfIsKZuG-QC--g8jf2hTx2hT-OmFpC5LClMgW2eLTCe1gal3xSV1ffcDpv90BxNSKZ9KzTbjeufo6xdKDS6N7LeNtfH379yXJWvp-OjRv5d8cwY3jJ-Qr7-z_lP_MTVIV4z6XHaa1wirPxtBmfSv8MAhRUdwi3FfZrHL47UpNXozt78os8oUY8v1NNbSoISPIJXbzBig0Fw&key=AIzaSyCYXbAb5oATfgJRzDY7v7_wNhQ6F7PltAM')"></div></div>
+    <div class="photo-grid"><div class="photo-item" style="background-image:url('https://maps.googleapis.com/maps/api/place/photo?maxwidth=600&photoreference=Ab43m-t29uKj2QG0VRlFGiPa5y59j0W-f11UOP5QOSObk9W5foJ_DSTONaPJkaXzqJ7-1OG8NlJcekrrdc1K_kmfXFO7JFH7lwUc4Xlnx84OaaIo56W_bjxQ-2YAQBCO664ZtkvVR_iUdGdUzl9xgbMn7EhHrHmVVDdSY4InCndypH2TE3_pIGBkkBheH-D8obKxc9sNwHjeAiIXTCV5t9LgrneHGqKCyg0mEH1JuoFY5mxDS-nnYMXfbaH9vXe1hOo7ZnaCCS7MAAewUQmdgVYdFItSO4DyVCOH-bI7QJoM3UKDcA&key=AIzaSyCYXbAb5oATfgJRzDY7v7_wNhQ6F7PltAM')"></div><div class="photo-item" style="background-image:url('https://maps.googleapis.com/maps/api/place/photo?maxwidth=600&photoreference=Ab43m-vTDis7a7nvsfOA3nDfFB0Qz1U-Y8rqj44YiYIZ0GRl-Hcnm3SBJe3Zq4HOgNbu3hY_FkBbVIXj73Pz8OCykXxOq8_mlnhwLsKDe-KEwB3W1kIrJw47veGlhhnJXTpgf0_BdjWW37ygK38-O0yrLxsi7bUzNTKaDnWQGnkdK-DkKy6AiG61wvIjBxW47bD6Ufb-NF5WfmPZj4bH5Gzuirc_CMcdYaFD4sZ5dpZk6Fr_BFIDsxN1Nc-IISht5p06Fqgik1SJtPeVzRfYOJ8W6O236J-kYXhXBIzMwAF-CT4SDQ&key=AIzaSyCYXbAb5oATfgJRzDY7v7_wNhQ6F7PltAM')"></div></div>
   </div>
 </section>
 
@@ -196,7 +198,7 @@ footer a{color:rgba(255,255,255,0.4);text-decoration:none}
     <img src="https://lh3.googleusercontent.com/a-/ALV-UjX1vizZgqvuAXbOF01uBs6fOwUV9hLgVWcw6ZMhf71SP09JTNUD=s128-c0x00000000-cc-rp-mo" style="width:40px;height:40px;border-radius:50%;object-fit:cover">
     <div>
       <div style="font-weight:600;font-size:14px;color:#1a2744">Maria Lo sciuto</div>
-      <div style="font-size:12px;color:#666">3 mesi fa</div>
+      <div style="font-size:12px;color:#666">4 mesi fa</div>
     </div>
   </div>
   <div style="color:#c9a84c;font-size:16px;margin-bottom:6px">★★★★★</div>
@@ -280,16 +282,19 @@ Ha risolto egregiamente la vicenda di mio interesse e non poss...</p>
       <div class="contact-card"><div class="contact-icon">📞</div><div class="contact-label">Telefono</div><div class="contact-value"><a href="tel:+39 340 674 3776">+39 340 674 3776</a></div></div>
       <div class="contact-card"><div class="contact-icon">📍</div><div class="contact-label">Indirizzo</div><div class="contact-value">Via dello Scalo,  10/9, 40131 Bologna</div></div>
       <div class="contact-card"><div class="contact-icon">🏛</div><div class="contact-label">Specializzazione</div><div class="contact-value">Avvocato civilista</div></div>
+      <div class="contact-card" style="text-align:left">
+  <div class="contact-icon" style="text-align:center">🕐</div>
+  <div class="contact-label" style="text-align:center;margin-bottom:12px">Orari</div>
+  <table style="font-size:13px;width:100%"><tr><td style="padding:5px 16px 5px 0;">Lunedì</td><td style="color:rgba(255,255,255,0.8);">09–17</td></tr><tr><td style="padding:5px 16px 5px 0;font-weight:700;color:var(--gold)">Martedì</td><td style="color:#fff;font-weight:700;color:var(--gold)">09–17</td></tr><tr><td style="padding:5px 16px 5px 0;">Mercoledì</td><td style="color:rgba(255,255,255,0.8);">09–17</td></tr><tr><td style="padding:5px 16px 5px 0;">Giovedì</td><td style="color:rgba(255,255,255,0.8);">09–17</td></tr><tr><td style="padding:5px 16px 5px 0;">Venerdì</td><td style="color:rgba(255,255,255,0.8);">09–17</td></tr><tr><td style="padding:5px 16px 5px 0;">Sabato</td><td style="color:#e53e3e;">Chiuso</td></tr><tr><td style="padding:5px 16px 5px 0;">Domenica</td><td style="color:#e53e3e;">Chiuso</td></tr></table>
+</div>
     </div>
   </div>
 </section>
 
-<div class="banner">
-  <div class="container">
-    <h2>Vuoi un sito come questo per il tuo studio?</h2>
-    <p>Simplo crea siti web professionali in 24 ore per studi legali, notai e professionisti.</p>
-    <a href="https://buy.stripe.com/8x25kC7mo39M0bN1Mv1B601" class="btn-primary">Scopri Simplo →</a>
-  </div>
+<div id="buy-banner">
+  <p class="dt">Ti piace questo sito? Il tuo potrebbe essere identico — online in 5 giorni per €99</p>
+  <p class="mob">Vuoi un sito così? €99</p>
+  <a href="https://buy.stripe.com/8x25kC7mo39M0bN1Mv1B601" target="_blank" class="stripe">Inizia ora →</a>
 </div>
 
 <footer>
